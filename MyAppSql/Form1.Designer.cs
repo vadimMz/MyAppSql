@@ -33,6 +33,7 @@
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.инфоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -94,7 +95,10 @@
             this.BrowserTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.инфоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.labelMouseY = new System.Windows.Forms.Label();
+            this.labelMouseX = new System.Windows.Forms.Label();
+            this.pushButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -103,6 +107,7 @@
             this.tabPage4.SuspendLayout();
             this.Browser.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -140,6 +145,13 @@
             this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.справкаToolStripMenuItem.Text = "Справка";
             // 
+            // инфоToolStripMenuItem
+            // 
+            this.инфоToolStripMenuItem.Name = "инфоToolStripMenuItem";
+            this.инфоToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.инфоToolStripMenuItem.Text = "Инфо";
+            this.инфоToolStripMenuItem.Click += new System.EventHandler(this.инфоToolStripMenuItem_Click);
+            // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
@@ -154,6 +166,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.Browser);
+            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
@@ -719,12 +732,50 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
             // 
-            // инфоToolStripMenuItem
+            // tabPage5
             // 
-            this.инфоToolStripMenuItem.Name = "инфоToolStripMenuItem";
-            this.инфоToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.инфоToolStripMenuItem.Text = "Инфо";
-            this.инфоToolStripMenuItem.Click += new System.EventHandler(this.инфоToolStripMenuItem_Click);
+            this.tabPage5.Controls.Add(this.labelMouseY);
+            this.tabPage5.Controls.Add(this.labelMouseX);
+            this.tabPage5.Controls.Add(this.pushButton);
+            this.tabPage5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(792, 400);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Box\'n\'Box";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tabPage5_MouseMove);
+            // 
+            // labelMouseY
+            // 
+            this.labelMouseY.AutoSize = true;
+            this.labelMouseY.Location = new System.Drawing.Point(403, 263);
+            this.labelMouseY.Name = "labelMouseY";
+            this.labelMouseY.Size = new System.Drawing.Size(41, 13);
+            this.labelMouseY.TabIndex = 2;
+            this.labelMouseY.Text = "label22";
+            // 
+            // labelMouseX
+            // 
+            this.labelMouseX.AutoSize = true;
+            this.labelMouseX.Location = new System.Drawing.Point(296, 263);
+            this.labelMouseX.Name = "labelMouseX";
+            this.labelMouseX.Size = new System.Drawing.Size(41, 13);
+            this.labelMouseX.TabIndex = 1;
+            this.labelMouseX.Text = "label14";
+            // 
+            // pushButton
+            // 
+            this.pushButton.Location = new System.Drawing.Point(327, 181);
+            this.pushButton.Name = "pushButton";
+            this.pushButton.Size = new System.Drawing.Size(75, 23);
+            this.pushButton.TabIndex = 0;
+            this.pushButton.Text = "Push";
+            this.pushButton.UseVisualStyleBackColor = true;
+            this.pushButton.Click += new System.EventHandler(this.pushButton_Click);
+            this.pushButton.MouseLeave += new System.EventHandler(this.pushButton_MouseLeave);
+            this.pushButton.MouseHover += new System.EventHandler(this.pushButton_MouseHover);
             // 
             // Form1
             // 
@@ -753,6 +804,8 @@
             this.Browser.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -826,6 +879,10 @@
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripMenuItem инфоToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button pushButton;
+        private System.Windows.Forms.Label labelMouseY;
+        private System.Windows.Forms.Label labelMouseX;
     }
 }
 

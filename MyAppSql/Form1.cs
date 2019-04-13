@@ -295,5 +295,43 @@ namespace MyAppSql
         {
             MessageBox.Show("Это тестовое приложения, подпиливая которое я изучаю C# и SQL");
         }
+
+        private void pushButton_MouseHover(object sender, EventArgs e)
+        {
+            pushButton.Text = "Hover";
+        }
+
+        private void pushButton_MouseLeave(object sender, EventArgs e)
+        {
+            pushButton.Text = "Push";
+        }
+
+
+
+        /* private async void tabControl1_MouseMove(object sender, MouseEventArgs e)
+         {
+
+
+                 labelMouseX.Text = e.X.ToString();
+                 labelMouseY.Text = e.Y.ToString();
+
+         }
+         */
+
+         private async void tabPage5_MouseMove(object sender, MouseEventArgs e)
+ {
+
+
+         labelMouseX.Text = e.X.ToString();
+         labelMouseY.Text = e.Y.ToString();
+
+ }
+
+        private void pushButton_Click(object sender, EventArgs e)
+        {
+            Form1 example = new Form1();
+            example.Show();
+
+        }
     }
 }
