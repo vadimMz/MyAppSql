@@ -22,6 +22,7 @@ namespace MyAppSql
 
         }
 
+
         private async void Form1_Load(object sender, EventArgs e)
         {
                         
@@ -329,8 +330,23 @@ namespace MyAppSql
 
         private void pushButton_Click(object sender, EventArgs e)
         {
-            Form1 example = new Form1();
-            example.Show();
+
+            DialogResult result = MessageBox.Show("Да нет или отмена?", "Сделай выбор", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            
+            if (result == DialogResult.Yes)
+                
+            {
+                MessageBox.Show("Ты нажал да");
+            }
+            else if(result == DialogResult.No)
+            {
+                MessageBox.Show("Ты нажал нет");
+            }
+            else if(result == DialogResult.Cancel)
+            {
+                MessageBox.Show("Ты выбрал отмена");
+            }
+
 
         }
     }
